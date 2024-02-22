@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  margin-top: 200px;
+  box-sizing: border-box;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.header {
+  color: white;
+  font-size: 1.2em;
+  background-color: rgb(62, 100, 144);
+  box-shadow: 5px 1px 10px;
+  display: flex;
+
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 1%;
+  margin-bottom: 1.5rem;
+  padding-right: 1%;
+  padding-left: 1%;
+
+  color: var(--textColor);
+
+  /* backdrop-filter: blur(10px); */
+  /* border: solid 3px rgb(6, 217, 241); */
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  margin: 0 1rem;
+  color: var(--textColor);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--secondaryColor);
+}
+
+.header .nav-btn {
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--textColor);
+  visibility: hidden;
+  opacity: 0;
+  font-size: 1.8rem;
+}
+
+.header div,
+nav {
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+}
+
+.mainComponent {
+  display: flex;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  
+
+  /* border: 1px solid red; */
+
+  /* border-bottom: solid 3px blue; */
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    padding-top: 20px;
+    margin-bottom: 0px;
+    overflow-y: hidden;
+  }
+  .header .nav-btn {
+    visibility: visible;
+    opacity: 1;
+    /* background-color: white; */
+    position: absolute;
+    right: 0;
+    padding-top: 10px;
+    padding-right: 15px;
+    color: black;
+  }
+
+  .mainComponent {
+    backdrop-filter: none;
+    margin-bottom: 20px;
+    overflow-y: hidden;
+  }
+
+  .header nav {
+    position: fixed;
+    top: -110vh;
+    left: 0vh;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: var(--mainColor);
+    transition: 1s;
+    background-color: rgb(44, 102, 149);
+  }
+
+  .header .responsive_nav {
+    transform: translateY(110vh);
+    z-index: 1000;
+  }
+
+  nav .nav-close-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  nav a {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  /* ... Other existing styles ... */
+
+  .avatar {
+    display: none !important; /* Add this rule to hide the avatar */
+  }
+}
+
+.avatarUpload {
+  /* border: 1px solid red; */
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: 235px;
+  color: white;
+  padding: 30px;
+  background-color: rgba(150, 69, 69, 0.281);
+  backdrop-filter: blur(5px);
+}
+.avatarUpload label {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+.avatarUpload div input {
+  color: white;
+}
+.avatarUpload div button {
+  background-color: rgba(196, 223, 196, 0.478);
+  border: 1px solid rgb(255, 255, 255);
+  padding: 2px 4px;
+  margin-top: 20px;
+  font-style: normal;
+  font-weight: bold;
+  color: rgb(225, 249, 241);
+}
+.avatarUpload div {
+  display: flex;
+  flex-direction: column;
+}
+.avatarUploadOFF {
+  display: none;
+}
+.navLoaderOFF {
+  display: none;
+}
+.avatar2 {
+  transition: transform 0.3s ease-in-out;
+}
+.avatar2:hover {
+  transform: scale(1.1);
+}
+.elementsNav:hover {
+  background-color: rgb(125, 168, 206);
+  border-radius: 5px;
+}
